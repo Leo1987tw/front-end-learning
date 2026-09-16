@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatables 介紹</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.0.4/css/dataTables.dataTables.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>datatables 介紹</h1>
+        <p>datatables 是用來做表格的套件，需引入jquery</p>
+
+        <table id="myTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>職位</th>
+                    <th>辦公室</th>
+                    <th>年齡</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>張小明</td>
+                    <td>前端工程師</td>
+                    <td>台北</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>後端工程師</td>
+                    <td>台中</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>王五</td>
+                    <td>專案經理</td>
+                    <td>高雄</td>
+                    <td>45</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/3.0.4/js/dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                language: {
+                    url: 'https://datatables.net'
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
