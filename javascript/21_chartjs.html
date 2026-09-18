@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chart.js 介紹</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.0.4/css/dataTables.dataTables.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>chart.js 介紹</h1>
+        <p>chart.js 是用來做圖形的套件，需引入jquery</p>
+
+        <canvas id="example" width="400" height="200"></canvas>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById("example"),
+            example = new Chart(ctx, {
+                // 參數設定[註1]
+                type: "bar", // 圖表類型
+                data: {
+                    labels: ["Red", "Green", "Blue"], // 標題
+                    datasets: [{
+                        label: "# of Votes", // 標籤
+                        data: [12, 19, 3], // 資料
+                        backgroundColor: [ // 背景色
+                            "#FF0000",
+                            "#00FF00",
+                            "#0000FF",
+                        ],
+                        borderWidth: 1 // 外框寬度
+                    }]
+                }
+            });
+    </script>
+</body>
+
+</html>

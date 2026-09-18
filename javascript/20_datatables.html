@@ -16,7 +16,7 @@
         </div>
 
         <h1>datatables 介紹</h1>
-        <p>datatables 是用來做表格的套件，需引入jquery</p>
+        <p>datatables 是拿來美化表格樣式用的套件，需引入jquery</p>
 
         <table id="myTable" class="display" style="width:100%">
             <thead>
@@ -54,6 +54,7 @@
     <script src="https://cdn.datatables.net/3.0.4/js/dataTables.min.js"></script>
 
     <script>
+        // 直接在要美化的表格後面加.DataTable 即可
         $(document).ready(function () {
             $('#myTable').DataTable({
                 language: {
